@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#FADADD" />
+  <title>Fairuz &amp; Hasna | Wedding Invitation</title>
+  <meta name="description"
+    content="With joyful hearts, we invite you to share in the celebration of the wedding of Fairuz and Hasna on Saturday, 22nd August 2026." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fairuz &amp; Hasna | Wedding Invitation" />
+  <meta property="og:description"
+    content="With joyful hearts, we invite you to share in the celebration of the wedding of Fairuz and Hasna on Saturday, 22nd August 2026." />
+  <meta property="og:image" content="assets/wedding-card-invitation.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Fairuz &amp; Hasna | Wedding Invitation" />
+  <meta property="twitter:description"
+    content="With joyful hearts, we invite you to share in the celebration of the wedding of Fairuz and Hasna on Saturday, 22nd August 2026." />
+  <meta property="twitter:image" content="assets/wedding-card-invitation.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/wedding.css" />
+</head>
+
+<body>
+
+  <!-- Particle Background Canvas -->
+  <canvas id="particlesCanvas"></canvas>
+
+  <!-- ═══════════════════════════════════════
+       PAGE 1 — SPLASH / HERO
+  ═══════════════════════════════════════ -->
+  <section id="splash" class="page">
+
+    <!-- Floral Accent Elements -->
+    <svg class="floral-decor top-left" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0 Q30 40 70 70" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M15 15 C10 8, 3 12, 5 20 C7 28, 17 25, 20 20 C23 15, 20 22, 15 15 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
+      <path d="M30 32 C22 25, 18 30, 22 38 C26 46, 35 42, 38 38 C41 34, 38 39, 30 32 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
+      <path d="M48 50 C40 45, 36 50, 40 58 C44 66, 53 62, 56 58 C59 54, 56 59, 48 50 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
+    </svg>
+
+    <svg class="floral-decor bottom-right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 100 Q70 60 30 30" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M85 85 C90 92, 97 88, 95 80 C93 72, 83 75, 80 80 C77 85, 80 78, 85 85 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
+      <path d="M70 68 C78 75, 82 70, 78 62 C74 54, 65 58, 62 62 C59 66, 62 61, 70 68 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
+      <path d="M52 50 C60 55, 64 50, 60 42 C56 34, 47 38, 44 42 C41 46, 44 41, 52 50 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
+    </svg>
+
+    <div class="splash-bg">
+      <img src="assets/splash-bg copy.jpg" alt="" aria-hidden="true" class="splash-bg-img" />
+      <div class="splash-overlay"></div>
+    </div>
+
+    <!-- Music pill (top-right) -->
+    <button class="music-pill" id="musicPill" aria-label="Play Music">
+      <span class="music-pill-label">Music</span>
+      <span class="music-pill-btn">
+        <i data-lucide="music-2" class="mp-icon icon-play" width="12" height="12"></i>
+        <i data-lucide="pause" class="mp-icon icon-pause" width="12" height="12"></i>
+      </span>
+    </button>
+
+    <!-- Bismillah calligraphy -->
+    <div class="splash-content-container">
+      <div class="bismillah splash-enter" style="--delay:0.15s">
+        <img src="assets/bismillah.png" alt="Bismillah ir-Rahman ir-Raheem" class="bismillah-img" />
+      </div>
+
+      <!-- Invite text -->
+      <p class="splash-invite splash-enter" style="--delay:0.4s">
+        With joyful hearts, we invite you to share in the celebration of our union.
+      </p>
+
+      <!-- Names block -->
+      <div class="splash-names-block">
+        <div class="splash-groom splash-enter" style="--delay:0.5s">
+          <span>Fairuz</span>
+        </div>
+
+        <p class="splash-ampersand splash-enter" style="--delay:0.6s">&amp;</p>
+
+        <p class="splash-bride splash-enter" style="--delay:0.65s">Hasna</p>
+      </div>
+
+      <!-- Countdown timer -->
+      <div class="countdown splash-enter" id="countdown" style="--delay:0.8s">
+        <div class="count-unit">
+          <span class="count-label">Days</span>
+          <div class="count-box"><span id="cd-days">00</span></div>
+        </div>
+        <span class="count-sep">
+          <svg width="7" height="7" viewBox="0 0 8 8">
+            <circle cx="4" cy="4" r="2" fill="var(--text-body)" opacity="0.6" />
+          </svg>
+        </span>
+        <div class="count-unit">
+          <span class="count-label">Hours</span>
+          <div class="count-box"><span id="cd-hours">00</span></div>
+        </div>
+        <span class="count-sep">
+          <svg width="7" height="7" viewBox="0 0 8 8">
+            <circle cx="4" cy="4" r="2" fill="var(--text-body)" opacity="0.6" />
+          </svg>
+        </span>
+        <div class="count-unit">
+          <span class="count-label">Minutes</span>
+          <div class="count-box"><span id="cd-mins">00</span></div>
+        </div>
+        <span class="count-sep">
+          <svg width="7" height="7" viewBox="0 0 8 8">
+            <circle cx="4" cy="4" r="2" fill="var(--text-body)" opacity="0.6" />
+          </svg>
+        </span>
+        <div class="count-unit">
+          <span class="count-label">Seconds</span>
+          <div class="count-box"><span id="cd-secs">00</span></div>
+        </div>
+      </div>
+
+      <!-- Date + venue -->
+      <div class="event-meta splash-enter" style="--delay:1s">
+        <p class="event-date">Saturday, 22 August 2026</p>
+        <p class="event-venue">Thottam - Venture by Chiriankandath, Thrissur</p>
+      </div>
+
+      <!-- Swipe CTA -->
+      <div class="swipe-wrap splash-enter" style="--delay:1.2s">
+        <div class="swipe-track" id="swipeTrack" role="button" aria-label="Swipe right to confirm attendance">
+          <div class="swipe-thumb" id="swipeThumb">
+            <i data-lucide="chevron-right" width="28" height="28" style="color:var(--primary)"></i>
+          </div>
+          <span class="swipe-label" id="swipeLabel">Swipe to Open</span>
+          <div class="swipe-fill" id="swipeFill"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PAGE 2 — DETAILS
+  ═══════════════════════════════════════ -->
+  <section id="details" class="page page-details" aria-hidden="true">
+
+    <div class="details-hero">
+      <div class="details-hero-overlay"></div>
+
+      <!-- Music pill -->
+      <button class="music-pill music-pill-details" id="musicPillDetails" aria-label="Toggle music">
+        <span class="music-pill-label">Music</span>
+        <span class="music-pill-btn">
+          <i data-lucide="music-2" class="mp-icon icon-play" width="12" height="12"></i>
+          <i data-lucide="pause" class="mp-icon icon-pause" width="12" height="12"></i>
+        </span>
+      </button>
+
+      <!-- Names & Divider block -->
+      <div class="dh-names-block">
+        <div class="dh-groom">
+          <span>Fairuz</span>
+        </div>
+        <p class="dh-ampersand">&amp;</p>
+        <p class="dh-bride">Hasna</p>
+
+        <!-- Sparkle divider -->
+        <div class="dh-divider-row">
+          <div class="dh-divider-line"></div>
+          <span class="dh-sparkle-star">✦</span>
+          <div class="dh-divider-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrollable content card -->
+    <div class="details-sheet">
+
+      <!-- Parents Card -->
+      <div class="save-date-card scroll-animate">
+        <p class="sdt-eyebrow">The Groom</p>
+        <p class="sdt-date">FAIRUZ</p>
+        <p class="sdt-venue-hint">S/o Mr. Abdul Rahim Muringathodi &amp; Mrs. Ayisha Kambakodan</p>
+        <div class="sdt-ornament">
+          <div class="sdt-line"></div>
+          <span class="sdt-sparkle">✦</span>
+          <div class="sdt-line"></div>
+        </div>
+        <p class="sdt-eyebrow">The Bride</p>
+        <p class="sdt-date">HASNA</p>
+        <p class="sdt-venue-hint">D/o Mr. PM Habeeb &amp; Mrs. Naseema Habeeb</p>
+      </div>
+
+      <!-- Save the date card -->
+      <div class="save-date-card scroll-animate">
+        <div class="sdt-ornament">
+          <div class="sdt-line"></div>
+          <span class="sdt-sparkle">✦</span>
+          <div class="sdt-line"></div>
+        </div>
+        <p class="sdt-eyebrow">Save the Date</p>
+        <p class="sdt-date">Saturday, 22 August 2026</p>
+        <p class="sdt-venue-hint">11:30 AM</p>
+        <button id="addToCalendarBtn" class="sdt-cal-btn">
+          <i data-lucide="calendar" width="15" height="15"></i>
+          <span>Add to Calendar</span>
+        </button>
+      </div>
+
+      <!-- ── Venue ── -->
+      <div class="card-section scroll-animate">
+        <h2 class="section-heading">Venue</h2>
+        <div class="info-card venue-elegant">
+          <div class="venue-top">
+            <div class="venue-pin-circle">
+              <i data-lucide="map-pin" width="18" height="18"></i>
+            </div>
+            <div class="venue-text">
+              <h3 class="venue-name">Thottam - Venture by Chiriankandath</h3>
+              <p class="venue-addr">Alpara, Kannara · Thrissur, Kerala, India</p>
+            </div>
+          </div>
+          <div class="venue-sep"></div>
+          <div class="venue-time">
+            <i data-lucide="clock" width="14" height="14" style="color:var(--text-body)"></i>
+            <span>Starts at 11:30 AM · Saturday, 22 August 2026</span>
+          </div>
+          <a href="https://maps.app.goo.gl/HGbccWdQaQbtqwhf6?g_st=ic" target="_blank"
+            rel="noopener" class="directions-btn-full">
+            <i data-lucide="navigation" width="15" height="15"></i>
+            <span>Get Directions</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ── How to Reach ── -->
+      <div class="card-section scroll-animate">
+        <h2 class="section-heading">How to Reach</h2>
+        <div class="transport-accordion">
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="transport-icon">
+                <i data-lucide="plane" width="20" height="20"></i>
+              </span>
+              <span class="transport-title">By Air</span>
+              <i data-lucide="chevron-down" class="accordion-chevron" width="18" height="18"></i>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-inner">
+                <ul class="transport-list">
+                  <li><span>Nearest airport:</span> <span class="t-highlight">Cochin International Airport (COK)</span></li>
+                  <li><span>Distance:</span> <span class="t-highlight">58 km · ~1 hr 20 min drive</span></li>
+                  <li><span>Recommended:</span> <span>Pre-paid airport taxi</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="transport-icon">
+                <i data-lucide="train-front" width="20" height="20"></i>
+              </span>
+              <span class="transport-title">By Train</span>
+              <i data-lucide="chevron-down" class="accordion-chevron" width="18" height="18"></i>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-inner">
+                <ul class="transport-list">
+                  <li><span>Nearest station:</span> <span class="t-highlight">Thrissur Railway Station (TCR)</span></li>
+                  <li><span>Distance:</span> <span class="t-highlight">16 km · ~30 min drive</span></li>
+                  <li><span>Recommended:</span> <span>App-based taxi or local auto-rickshaw</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false">
+              <span class="transport-icon">
+                <i data-lucide="bus" width="20" height="20"></i>
+              </span>
+              <span class="transport-title">By Bus</span>
+              <i data-lucide="chevron-down" class="accordion-chevron" width="18" height="18"></i>
+            </button>
+            <div class="accordion-body">
+              <div class="accordion-inner">
+                <ul class="transport-list">
+                  <li><span>Nearest bus stop:</span> <span class="t-highlight">Pattikkad (on NH 544)</span></li>
+                  <li><span>Distance:</span> <span class="t-highlight">4 km · ~8 min drive</span></li>
+                  <li><span>Recommended:</span> <span>Local auto-rickshaw from Pattikkad</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Downloads ── -->
+      <div class="card-section scroll-animate">
+        <h2 class="section-heading">Downloads</h2>
+        <div class="download-grid">
+          <div class="info-card download-card">
+            <div class="download-preview">
+              <img src="assets/wedding-card-invitation.png" alt="Wedding card preview" class="download-thumb" />
+            </div>
+            <p class="download-label">Wedding Invitation Card</p>
+            <button class="download-btn">Download Card</button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="wedding-footer">
+        <p>With love &amp; prayers</p>
+        <p class="footer-names">Parents &amp; Relatives</p>
+      </footer>
+
+    </div><!-- /details-sheet -->
+  </section>
+
+  <!-- Background music -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="audio/nikah-nasheed.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="js/wedding.js"></script>
+</body>
+
+</html>
