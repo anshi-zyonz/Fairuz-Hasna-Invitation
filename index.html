@@ -14,14 +14,14 @@
   <meta property="og:title" content="Fairuz &amp; Hasna | Wedding Invitation" />
   <meta property="og:description"
     content="With joyful hearts, we invite you to share in the celebration of the wedding of Fairuz and Hasna on Saturday, 22nd August 2026." />
-  <meta property="og:image" content="assets/wedding-card-invitation.png" />
+  <meta property="og:image" content="assets/wpreview.jpg" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="Fairuz &amp; Hasna | Wedding Invitation" />
   <meta property="twitter:description"
     content="With joyful hearts, we invite you to share in the celebration of the wedding of Fairuz and Hasna on Saturday, 22nd August 2026." />
-  <meta property="twitter:image" content="assets/wedding-card-invitation.png" />
+  <meta property="twitter:image" content="assets/wpreview.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +32,11 @@
 </head>
 
 <body>
+
+  <!-- 3D Envelope Intro Overlay -->
+  <div id="envelopeOverlay" class="envelope-overlay">
+    <canvas id="introCanvas" class="intro-canvas"></canvas>
+  </div>
 
   <!-- Particle Background Canvas -->
   <canvas id="particlesCanvas"></canvas>
@@ -44,16 +49,22 @@
     <!-- Floral Accent Elements -->
     <svg class="floral-decor top-left" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 0 Q30 40 70 70" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M15 15 C10 8, 3 12, 5 20 C7 28, 17 25, 20 20 C23 15, 20 22, 15 15 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
-      <path d="M30 32 C22 25, 18 30, 22 38 C26 46, 35 42, 38 38 C41 34, 38 39, 30 32 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
-      <path d="M48 50 C40 45, 36 50, 40 58 C44 66, 53 62, 56 58 C59 54, 56 59, 48 50 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
+      <path d="M15 15 C10 8, 3 12, 5 20 C7 28, 17 25, 20 20 C23 15, 20 22, 15 15 Z" fill="var(--sage-light)"
+        stroke="var(--sage)" stroke-width="0.8" />
+      <path d="M30 32 C22 25, 18 30, 22 38 C26 46, 35 42, 38 38 C41 34, 38 39, 30 32 Z" fill="var(--sage-light)"
+        stroke="var(--sage)" stroke-width="0.8" />
+      <path d="M48 50 C40 45, 36 50, 40 58 C44 66, 53 62, 56 58 C59 54, 56 59, 48 50 Z" fill="var(--sage-light)"
+        stroke="var(--sage)" stroke-width="0.8" />
     </svg>
 
     <svg class="floral-decor bottom-right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <path d="M100 100 Q70 60 30 30" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M85 85 C90 92, 97 88, 95 80 C93 72, 83 75, 80 80 C77 85, 80 78, 85 85 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
-      <path d="M70 68 C78 75, 82 70, 78 62 C74 54, 65 58, 62 62 C59 66, 62 61, 70 68 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
-      <path d="M52 50 C60 55, 64 50, 60 42 C56 34, 47 38, 44 42 C41 46, 44 41, 52 50 Z" fill="var(--sage-light)" stroke="var(--sage)" stroke-width="0.8" />
+      <path d="M85 85 C90 92, 97 88, 95 80 C93 72, 83 75, 80 80 C77 85, 80 78, 85 85 Z" fill="var(--sage-light)"
+        stroke="var(--sage)" stroke-width="0.8" />
+      <path d="M70 68 C78 75, 82 70, 78 62 C74 54, 65 58, 62 62 C59 66, 62 61, 70 68 Z" fill="var(--sage-light)"
+        stroke="var(--sage)" stroke-width="0.8" />
+      <path d="M52 50 C60 55, 64 50, 60 42 C56 34, 47 38, 44 42 C41 46, 44 41, 52 50 Z" fill="var(--sage-light)"
+        stroke="var(--sage)" stroke-width="0.8" />
     </svg>
 
     <div class="splash-bg">
@@ -186,16 +197,14 @@
 
       <!-- Parents Card -->
       <div class="save-date-card scroll-animate">
-        <p class="sdt-eyebrow">The Groom</p>
-        <p class="sdt-date">FAIRUZ</p>
+        <p class="sdt-date groom-bride-name">FAIRUZ</p>
         <p class="sdt-venue-hint">S/o Mr. Abdul Rahim Muringathodi &amp; Mrs. Ayisha Kambakodan</p>
         <div class="sdt-ornament">
           <div class="sdt-line"></div>
           <span class="sdt-sparkle">✦</span>
           <div class="sdt-line"></div>
         </div>
-        <p class="sdt-eyebrow">The Bride</p>
-        <p class="sdt-date">HASNA</p>
+        <p class="sdt-date groom-bride-name">HASNA</p>
         <p class="sdt-venue-hint">D/o Mr. PM Habeeb &amp; Mrs. Naseema Habeeb</p>
       </div>
 
@@ -206,7 +215,7 @@
           <span class="sdt-sparkle">✦</span>
           <div class="sdt-line"></div>
         </div>
-        <p class="sdt-eyebrow">Save the Date</p>
+        <p class="sdt-eyebrow">Mark Your Calendar</p>
         <p class="sdt-date">Saturday, 22 August 2026</p>
         <p class="sdt-venue-hint">11:30 AM</p>
         <button id="addToCalendarBtn" class="sdt-cal-btn">
@@ -231,10 +240,10 @@
           <div class="venue-sep"></div>
           <div class="venue-time">
             <i data-lucide="clock" width="14" height="14" style="color:var(--text-body)"></i>
-            <span>Starts at 11:30 AM · Saturday, 22 August 2026</span>
+            <span>Starts at 4:30 PM · Saturday, 22 August 2026</span>
           </div>
-          <a href="https://maps.app.goo.gl/HGbccWdQaQbtqwhf6?g_st=ic" target="_blank"
-            rel="noopener" class="directions-btn-full">
+          <a href="https://maps.app.goo.gl/HGbccWdQaQbtqwhf6?g_st=ic" target="_blank" rel="noopener"
+            class="directions-btn-full">
             <i data-lucide="navigation" width="15" height="15"></i>
             <span>Get Directions</span>
           </a>
@@ -257,7 +266,8 @@
             <div class="accordion-body">
               <div class="accordion-inner">
                 <ul class="transport-list">
-                  <li><span>Nearest airport:</span> <span class="t-highlight">Cochin International Airport (COK)</span></li>
+                  <li><span>Nearest airport:</span> <span class="t-highlight">Cochin International Airport (COK)</span>
+                  </li>
                   <li><span>Distance:</span> <span class="t-highlight">58 km · ~1 hr 20 min drive</span></li>
                   <li><span>Recommended:</span> <span>Pre-paid airport taxi</span></li>
                 </ul>
@@ -312,7 +322,7 @@
         <div class="download-grid">
           <div class="info-card download-card">
             <div class="download-preview">
-              <img src="assets/wedding-card-invitation.png" alt="Wedding card preview" class="download-thumb" />
+              <img src="assets/FAIRUZ HASNA.jpg" alt="Wedding card preview" class="download-thumb" />
             </div>
             <p class="download-label">Wedding Invitation Card</p>
             <button class="download-btn">Download Card</button>
@@ -330,7 +340,7 @@
 
   <!-- Background music -->
   <audio id="bgMusic" loop preload="auto">
-    <source src="audio/nikah-nasheed.mp3" type="audio/mpeg" />
+    <source src="audio/audio.mp3" type="audio/mpeg" />
   </audio>
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
