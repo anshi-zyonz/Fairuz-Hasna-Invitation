@@ -430,10 +430,9 @@ img {
   align-items: center;
   justify-content: center;
   padding-left: 64px;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
   color: var(--primary-dark);
   pointer-events: none;
 }
@@ -967,7 +966,7 @@ img {
 
   .swipe-label {
     padding-left: 60px;
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
