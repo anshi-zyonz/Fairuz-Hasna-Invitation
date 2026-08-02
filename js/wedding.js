@@ -366,8 +366,8 @@ if (musicPillDet) musicPillDet.addEventListener('click', toggleMusic);
    DOWNLOAD CARD BUTTON
  ════════════════════════════════════════════ */
 async function downloadWeddingCard(btn) {
-  const CARD_URL = 'assets/Fairuz-Hasna Invitation.png';
-  const FILENAME = 'Fairuz-Hasna Invitation.png';
+  const CARD_URL = 'assets/Fairuz-Hasna Invitation.jpg';
+  const FILENAME = 'Fairuz-Hasna Invitation.jpg';
 
   const origText = btn.textContent;
   btn.textContent = 'Downloading…';
@@ -377,7 +377,7 @@ async function downloadWeddingCard(btn) {
     const res = await fetch(CARD_URL);
     if (!res.ok) throw new Error('Card image not found');
     const blob = await res.blob();
-    const file = new File([blob], FILENAME, { type: blob.type || 'image/png' });
+    const file = new File([blob], FILENAME, { type: blob.type || 'image/jpeg' });
 
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
       await navigator.share({
